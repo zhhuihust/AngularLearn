@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +6,6 @@ import {Router} from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'router';
-  constructor(private router: Router){
+  title = 'Bosch Rexroth Xian team 研发设计';
 
-  }
-  toProductDetails() {
-    this.router.navigate(['/product',2])
-  }
 }
