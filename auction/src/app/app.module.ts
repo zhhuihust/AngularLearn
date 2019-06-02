@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -13,6 +12,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { HomeComponent } from './home/home.component';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {ProductService} from './shared/product.service';
 
 const routeConfig: Routes =[
   {path: '', component: HomeComponent},
@@ -33,10 +33,9 @@ const routeConfig: Routes =[
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
     RouterModule.forRoot((routeConfig))
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
